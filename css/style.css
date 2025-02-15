@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: var(--primary-font);
 }
 
 a {
@@ -27,7 +28,7 @@ html:has(#mode-switcher:checked) {
 .navbar {
   position: fixed;
   width: 100%;
-  font-family: var(--primary-font);
+  background-color: light-dark(white, black);
   box-shadow: 0px 0px 10px 2px rgb(196, 196, 196);
 }
 
@@ -100,5 +101,89 @@ html:has(#mode-switcher:checked) {
 }
 
 .navbar input[type="radio"]:checked ~ div.underline {
+  width: 100%;
+}
+
+/* Home Section */
+.home-section {
+  background-color: #eee;
+  height: 100vh;
+}
+
+.home-section .container {
+  padding-top: 130px;
+  padding-inline: var(--padding-inline);
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-section .container .text {
+  color: #37373f;
+  line-height: 1.5;
+}
+
+.home-section .container .text h2 {
+  font-family: var(--secondary-font);
+  font-size: 65px;
+  width: 70%;
+}
+
+.home-section .container .text .buttons-container {
+  display: flex;
+}
+.home-section .container .text .buttons-container .book-table {
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  background-color: var(--primary-color);
+  border-radius: 0px 500px 500px 500px;
+  border: none;
+  margin-right: 30px;
+}
+
+.home-section .container .text .buttons-container .book-table:hover {
+  background-color: red;
+}
+
+.home-section .container .text .buttons-container .watch-video-btn {
+  display: flex;
+  align-items: center;
+}
+
+.home-section .container .text .buttons-container .half-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-bottom-left-radius: 110px;
+  border-top-left-radius: 110px;
+  position: relative;
+}
+
+.home-section .container .text .buttons-container .circle {
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.home-section .container .text .buttons-container .watch-video-btn span {
+  margin-left: 30px;
+}
+
+.home-section .container .image {
+  width: 40%;
+}
+
+.home-section .container .image img {
   width: 100%;
 }
