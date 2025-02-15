@@ -15,6 +15,7 @@ html {
 
   --primary-color: light-dark(rgb(206, 18, 18), rgb(193, 126, 31));
   --secondary-color: light-dark(black, white);
+  --secondary-color-r: light-dark(white, black);
   --padding-inline: 7%;
   --primary-font: "Open Sans", sans;
   --secondary-font: "Amatic SC", serif;
@@ -382,4 +383,101 @@ html:has(#mode-switcher:checked) {
 
 .gallery-section .container .cards-container .card:hover .img-description {
   bottom: 0%;
+}
+
+/* COntact SECTION */
+.contact-section {
+  background-color: var(--section-background-even);
+}
+
+.contact-section .container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 70px;
+}
+
+.contact-section .container .iframe {
+  width: 100%;
+}
+
+.contact-section .container .contact-cards-container {
+  --gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--gap);
+  margin-bottom: 30px;
+}
+
+.contact-section .container .contact-cards-container .contact-card {
+  background-color: #eee;
+  width: calc(calc(100% - var(--gap)) / 2);
+  display: flex;
+  align-items: center;
+}
+
+.contact-section .container .contact-cards-container .contact-card .circle {
+  background-color: var(--primary-color);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-color-r);
+}
+
+.contact-section .container .contact-cards-container .contact-card .text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.contact-section .container .form {
+  width: 100%;
+  box-shadow: 0px 0px 10px 5px rgb(240, 240, 240);
+}
+
+.contact-section .container .form .container {
+  --gap: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  padding-inline: 20px;
+  gap: var(--gap);
+}
+
+.contact-section .container .form .container .name {
+  width: calc((100% - var(--gap)) / 2);
+  padding: 15px;
+  border: #eee 1px solid;
+}
+
+.contact-section .container .form .container .mail {
+  width: calc((100% - var(--gap)) / 2);
+  padding: 15px;
+  border: #eee 1px solid;
+}
+
+.contact-section .container .form .container .subject {
+  width: 100%;
+  padding: 15px;
+  border: #eee 1px solid;
+}
+
+.contact-section .container .form .container .message {
+  width: 100%;
+  padding: 15px;
+  border: #eee 1px solid;
+  columns: 30;
+}
+
+.contact-section .container .form .container .send-message-btn {
+  background-color: var(--primary-color);
+  padding-inline: 30px;
+  padding-block: 10px;
+  border: none;
+  border-radius: 500px;
+  color: var(--secondary-color-r);
 }
