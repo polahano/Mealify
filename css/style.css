@@ -1,2 +1,104 @@
+/* shared */
 * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  color-scheme: light dark;
+
+  --primary-color: light-dark(rgb(206, 18, 18), rgb(193, 126, 31));
+  --secondary-color: light-dark(black, white);
+  --padding-inline: 7%;
+  --primary-font: "Open Sans", sans;
+  --secondary-font: "Amatic SC", serif;
+}
+
+html:has(#mode-switcher:checked) {
+  color-scheme: light;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-family: var(--primary-font);
+  box-shadow: 0px 0px 10px 2px rgb(196, 196, 196);
+}
+
+.navbar .container {
+  display: flex;
+  padding-inline: var(--padding-inline);
+  padding-block: 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo h1 {
+  font-size: 30px;
+}
+
+.navbar .logo span {
+  color: var(--primary-color);
+}
+
+.navbar .list {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .list .list-item {
+  padding-inline: 15px;
+  font-weight: 500;
+}
+
+.navbar .list .list-item label {
+  color: grey;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.navbar .list .list-item a {
+  color: grey;
+}
+
+.navbar .list .list-item a:hover {
+  color: var(--secondary-color);
+}
+
+.navbar .list .underline {
+  width: 0%;
+  height: 3px;
+  margin-top: 5px;
+  background-color: var(--primary-color);
+  transition: all 0.4s;
+}
+
+.navbar .list .list-item:hover .underline {
+  width: 100%;
+}
+
+.navbar i.dark-mode-icon {
+  font-size: 25px;
+}
+
+.navbar #mode-switcher {
+  display: none;
+}
+
+.navbar input[type="radio"] {
+  display: none;
+}
+
+.navbar input[type="radio"]:checked ~ label {
+  color: var(--secondary-color);
+}
+
+.navbar input[type="radio"]:checked ~ div.underline {
+  width: 100%;
 }

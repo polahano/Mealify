@@ -4,6 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mealify</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container">
+        <div class="logo">
+          <h1 class="logo-word">Mealify<span>.</span></h1>
+        </div>
+        <ul class="list">
+          <li class="list-item">
+              <input type="radio" id="home" name="active-tab" checked />
+              <label for="home"> Home </label>
+              <div class="underline"></div>
+          </li>
+
+          <li class="list-item">
+            <input type="radio" id="chefs" name="active-tab" />
+            <label for="chefs"> chefs </label>
+            <div class="underline"></div>
+          </li>
+
+          <li class="list-item">
+            <input type="radio" id="gallery" name="active-tab" />
+            <label for="gallery"> Gallery </label>
+            <div class="underline"></div>
+          </li>
+
+          <li class="list-item">
+            <input type="radio" id="contact" name="active-tab" />
+            <label for="contact"> Contact </label>
+            <div class="underline"></div>
+          </li>
+        </ul>
+        <div class="light-dark-switch">
+          <input type="checkbox" id="mode-switcher" checked />
+          <label for="mode-switcher">
+          <i class="fas fa-moon dark-mode-icon"> </i>
+        </div>
+        </label>
+      </div>
+    </div>
+
+  </body>
 </html>
