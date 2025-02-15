@@ -18,10 +18,21 @@ html {
   --padding-inline: 7%;
   --primary-font: "Open Sans", sans;
   --secondary-font: "Amatic SC", serif;
+  --lg-font-size: 40px;
 }
 
 html:has(#mode-switcher:checked) {
   color-scheme: light;
+}
+
+.container {
+  padding-inline: var(--padding-inline);
+  display: flex;
+}
+
+::selection {
+  color: white;
+  background: rgb(255, 129, 129);
 }
 
 /* navbar */
@@ -30,6 +41,7 @@ html:has(#mode-switcher:checked) {
   width: 100%;
   background-color: light-dark(white, black);
   box-shadow: 0px 0px 10px 2px rgb(196, 196, 196);
+  z-index: 3;
 }
 
 .navbar .container {
@@ -112,9 +124,7 @@ html:has(#mode-switcher:checked) {
 
 .home-section .container {
   padding-top: 130px;
-  padding-inline: var(--padding-inline);
   padding-bottom: 30px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -186,4 +196,85 @@ html:has(#mode-switcher:checked) {
 
 .home-section .container .image img {
   width: 100%;
+}
+
+/* Chefs Section */
+.chefs-section .container {
+  padding-block: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chefs-section .cards-container {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chefs-section .cards-container .card {
+  width: 30%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 10px #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.chefs-section .cards-container .card:hover {
+  transform: scale(1.05);
+}
+
+.chefs-section .cards-container .card .image {
+  position: relative;
+}
+
+.chefs-section .cards-container .card .image img {
+  width: 100%;
+}
+
+.chefs-section .cards-container .card .image .contact-icons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -70px;
+  top: 20px;
+  background-color: #eeeeeea9;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.chefs-section .cards-container .card:hover .image .contact-icons {
+  right: 30px;
+}
+
+.chefs-section .cards-container .card .image .contact-icons a {
+  padding: 20px;
+  color: grey;
+}
+
+.chefs-section .cards-container .card .image svg {
+  position: absolute;
+  height: 90px;
+  bottom: 0;
+  left: 0;
+}
+
+.chefs-section .cards-container .card .image svg.svg1 {
+  left: 70%;
+}
+
+.chefs-section .cards-container .card .text {
+  padding: 10px 20px;
+}
+
+.chefs-section .container h3 {
+  font-family: var(--secondary-font);
+  font-size: var(--lg-font-size);
+}
+
+.chefs-section .container h3 span {
+  font-family: var(--secondary-font);
+  color: var(--primary-color);
 }
