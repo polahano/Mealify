@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mealify</title>
-    <link rel="stylesheet" href="./css/style.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -21,6 +21,8 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="./assets/images/favicon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -67,8 +69,8 @@
     <!-- Home Section -->
     <div class="home-section">
       <div class="container">
-        <div class="text">
-          <h2>Enjoy Your Healthy Delicious Food</h2>
+        <div class="text sm-100">
+          <h2 class="lg-70 sm-100">Enjoy Your Healthy Delicious Food</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
             quaerat blanditiis tempora.
@@ -88,7 +90,7 @@
             </a>
           </div>
         </div>
-        <div class="image">
+        <div class="image sm-100 lg-40">
           <img src="./assets/images/hero-img.png" alt="salad plate" />
         </div>
       </div>
@@ -103,9 +105,8 @@
           <h3>Our <span>Proffesional</span> Chefs</h3>
           <br />
         </div>
-
         <div class="cards-container">
-          <div class="card">
+          <div class="card sm-100 md-50 lg-30">
             <div class="image">
               <img src="./assets/images/chefs-1.jpg" alt="chef" />
               <div class="contact-icons">
@@ -151,7 +152,7 @@
               </p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-30">
             <div class="image">
               <img src="./assets/images/chefs-1.jpg" alt="chef" />
               <div class="contact-icons">
@@ -197,7 +198,7 @@
               </p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-30">
             <div class="image">
               <img src="./assets/images/chefs-1.jpg" alt="chef" />
               <div class="contact-icons">
@@ -256,50 +257,50 @@
           <h3>Check <span>Our Gallery</span></h3>
           <br />
         </div>
-        <div class="cards-container">
-          <div class="card">
+        <div class="cards-container lg-100 sm-100">
+          <div class="card sm-100 md-50 lg-33">
             <img src="./assets/images/meal-1.jpg" alt="" />
             <div class="img-description">
               <p>Pizza</p>
               <p>Hawaiian pizza with ham and pineapple</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-33">
             <img src="./assets/images/meal-4.jpg" alt="" />
             <div class="img-description">
               <p>Pizza</p>
               <p>Hawaiian pizza with ham and pineapple</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-33">
             <img src="./assets/images/meal-2.jpg" alt="" />
             <div class="img-description">
               <p>Pizza</p>
               <p>Hawaiian pizza with ham and pineapple</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-33">
             <img src="./assets/images/meal-7.jpg" alt="" />
             <div class="img-description">
               <p>Pizza</p>
               <p>Hawaiian pizza with ham and pineapple</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-33">
             <img src="./assets/images/meal-3.jpg" alt="" />
             <div class="img-description">
               <p>Pizza</p>
               <p>Hawaiian pizza with ham and pineapple</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-33">
             <img src="./assets/images/meal-5.jpg" alt="" />
             <div class="img-description">
               <p>Pizza</p>
               <p>Hawaiian pizza with ham and pineapple</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card sm-100 md-50 lg-33">
             <img src="./assets/images/meal-6.jpg" alt="" />
             <div class="img-description">
               <p>Pizza</p>
@@ -372,8 +373,18 @@
         <div class="form">
           <form action="">
             <div class="container">
-              <input type="text" class="name" placeholder="Your Name" />
-              <input type="email" class="mail" placeholder="Your Email" />
+              <input
+                type="text"
+                class="name"
+                placeholder="Your Name"
+                class="sm-100"
+              />
+              <input
+                type="email"
+                class="mail"
+                placeholder="Your Email"
+                class="sm-100"
+              />
               <input type="text" class="subject" placeholder="Subject" />
               <textarea
                 name="message"
@@ -398,7 +409,7 @@
     <!--  Footer -->
     <div class="footer">
       <div class="container">
-        <div class="col1">
+        <div class="col1 sm-100 md-50 lg-20">
           <div class="logo">
             <img src="./assets/images/favicon.png" alt="logo" />
             <h1 class="logo-word">Mealify<span>.</span></h1>
@@ -424,7 +435,7 @@
             </a>
           </div>
         </div>
-        <div class="col2">
+        <div class="col2 sm-100 md-100 lg-50">
           <p>Subscribe our Newsletter</p>
           <p>
             Don't miss out on our latest menu updates and exclusive offers -
@@ -471,7 +482,7 @@
             </li>
           </ul>
         </div>
-        <div class="col3">
+        <div class="col3 sm-100 md-40 lg-20">
           <p>Get in Touch</p>
           <ul class="info-list">
             <li class="list-item">

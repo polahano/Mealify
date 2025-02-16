@@ -57,6 +57,8 @@ html:has(#mode-switcher:checked) .dark-mode-icon {
 .container .heading h2 {
   color: #9f9f9f;
   font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .container .heading h3 {
@@ -71,6 +73,16 @@ html:has(#mode-switcher:checked) .dark-mode-icon {
 
 input {
   background-color: white;
+}
+
+input:focus {
+  border: 1px var(--primary-color) solid;
+  outline: none;
+}
+
+textarea:focus {
+  border: 1px var(--primary-color) solid;
+  outline: none;
 }
 
 textarea {
@@ -166,10 +178,13 @@ navbar
   width: 100%;
 }
 
-/* Home Section */
+/* 
+
+Home Section 
+
+*/
 .home-section {
   background-color: var(--section-background-odd);
-  height: 100vh;
 }
 
 .home-section .container {
@@ -187,7 +202,6 @@ navbar
 .home-section .container .text h2 {
   font-family: var(--secondary-font);
   font-size: 65px;
-  width: 70%;
 }
 
 .home-section .container .text .buttons-container {
@@ -239,10 +253,6 @@ navbar
 
 .home-section .container .text .buttons-container .watch-video-btn span {
   margin-left: 30px;
-}
-
-.home-section .container .image {
-  width: 40%;
 }
 
 .home-section .container .image:hover {
@@ -311,10 +321,11 @@ Chefs Section
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .chefs-section .cards-container .card {
-  width: 30%;
   box-sizing: border-box;
   box-shadow: 0px 0px 5px 5px light-dark(#eeeeee9e, rgba(62, 62, 62, 0.493));
   border-radius: 10px;
@@ -392,13 +403,14 @@ Chefs Section
 .gallery-section .container .cards-container {
   display: flex;
   flex-flow: column wrap;
-  width: 100%;
+  align-items: center;
   gap: 10px 20px;
-  height: 170vh;
+  height: 1200px;
+  align-content: center;
 }
 
 .gallery-section .container .cards-container .card {
-  width: 33.333%;
+  /* width: 33.333%; */
   border: white 5px solid;
   overflow: hidden;
   position: relative;
@@ -485,26 +497,28 @@ Chefs Section
 
 .contact-section .container .form {
   width: 100%;
-  box-shadow: 0px 0px 10px 5px rgba(240, 240, 240, 0.205);
+  box-shadow: 0px 0px 10px 5px rgba(76, 76, 76, 0.086);
   background-color: light-dark(white, #171717);
 }
 
 .contact-section .container .form .container {
   --gap: 10px;
+  --gap-name-mail: calc((100% - var(--gap)) / 2);
   display: flex;
   flex-flow: row wrap;
   padding-inline: 20px;
+  justify-content: space-between;
   gap: var(--gap);
 }
 
 .contact-section .container .form .container .name {
-  width: calc((100% - var(--gap)) / 2);
+  width: var(--gap-name-mail);
   padding: 15px;
   border: #eee 1px solid;
 }
 
 .contact-section .container .form .container .mail {
-  width: calc((100% - var(--gap)) / 2);
+  width: var(--gap-name-mail);
   padding: 15px;
   border: #eee 1px solid;
 }
@@ -513,6 +527,10 @@ Chefs Section
   width: 100%;
   padding: 15px;
   border: #eee 1px solid;
+}
+
+.contact-section .container .form .container input:focus {
+  border: var(--primary-color) 1px solid;
 }
 
 .contact-section .container .form .container .message {
@@ -531,7 +549,12 @@ Chefs Section
   color: var(--secondary-color-r);
 }
 
-/* Footer Section */
+/* 
+
+Footer Section 
+
+*/
+
 .footer {
   background-image: url("../assets/images/textured-metal-background.jpg");
   background-size: contain;
@@ -545,19 +568,20 @@ Chefs Section
   gap: 20px;
   padding-block: 50px;
   justify-content: center;
+  line-height: 2;
 }
 
-.footer .container .col1 {
-  flex-basis: 25%;
+/* .footer .container .col1 {
+  width: 25%;
 }
 
 .footer .container .col2 {
-  flex-basis: 50%;
+  width: 50%;
 }
 
 .footer .container .col3 {
-  flex-basis: 25%;
-}
+  width: 25%;
+} */
 
 .footer .container .col1 .logo img {
   width: 30px;
@@ -591,6 +615,7 @@ Chefs Section
 
 .footer .container .col1 .contact-icons a {
   color: white;
+  margin-block: 10px;
 }
 
 .footer .container .col2 .email-textbox {
