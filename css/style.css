@@ -164,6 +164,7 @@ html:has(#mode-switcher:checked) {
 .home-section .container .text .buttons-container .watch-video-btn {
   display: flex;
   align-items: center;
+  color: var(--secondary-color);
 }
 
 .home-section .container .text .buttons-container .half-circle {
@@ -416,12 +417,13 @@ html:has(#mode-switcher:checked) {
   width: calc(calc(100% - var(--gap)) / 2);
   display: flex;
   align-items: center;
+  padding: 15px;
 }
 
 .contact-section .container .contact-cards-container .contact-card .circle {
   background-color: var(--primary-color);
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -480,4 +482,115 @@ html:has(#mode-switcher:checked) {
   border: none;
   border-radius: 500px;
   color: var(--secondary-color-r);
+}
+
+/* Footer Section */
+.footer {
+  background-image: url("../assets/images/textured-metal-background.jpg");
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0.534);
+  background-blend-mode: color-burn;
+  color: white;
+}
+
+.footer .container {
+  display: flex;
+  gap: 20px;
+  padding-block: 50px;
+  justify-content: center;
+}
+
+.footer .container .col1 {
+  flex-basis: 25%;
+}
+
+.footer .container .col2 {
+  flex-basis: 50%;
+}
+
+.footer .container .col3 {
+  flex-basis: 25%;
+}
+
+.footer .container .col1 .logo img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+.footer .container .col1 .logo h1 {
+  font-size: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer .container .col1 .logo span {
+  color: var(--primary-color);
+}
+
+.footer .container .col1 .social-media {
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer .container .col1 hr {
+  border: 1px grey solid;
+}
+
+.footer .container .col1 .contact-icons {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.footer .container .col1 .contact-icons a {
+  color: white;
+}
+
+.footer .container .col2 .email-textbox {
+  padding: 15px;
+  width: 70%;
+}
+
+.footer .container .col2 .subscribe-btn {
+  padding: 17px 15px;
+  width: 25%;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--secondary-color-r);
+}
+
+.footer .container .col2 .links-list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.footer .container .col2 .links-list .list-item {
+  width: 50%;
+  padding: 5px;
+  transition: all 0.3s;
+}
+
+.footer .container .col2 .links-list .list-item:hover {
+  background-color: rgba(255, 255, 255, 0.107);
+  transform: translateX(5px);
+}
+
+.footer .container .col3 .info-list {
+  list-style: none;
+}
+
+.footer .container .col3 .info-list .list-item {
+  margin-block: 15px;
+}
+
+.footer .container .col3 .info-list .list-item i {
+  color: var(--primary-color);
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.footer .container .col3 .info-list .list-item p {
+  display: inline-block;
 }
