@@ -178,6 +178,47 @@ navbar
   width: 100%;
 }
 
+.navbar .navbar-right {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+html:has(#navbar-menu-icon:checked) .navbar .navbar-right {
+  display: inline-block;
+}
+
+.navbar .container .menu-icon {
+  position: relative;
+  z-index: 4;
+}
+
+.navbar .container .menu-icon #navbar-menu-icon {
+  display: none;
+}
+
+.navbar .navbar-right .white-layer {
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.625);
+}
+
+.navbar .navbar-right .verticalnav {
+  position: absolute;
+  width: 300px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.navbar .navbar-right .verticalnav .list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
 /* 
 
 Home Section 
